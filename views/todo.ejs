@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.2.js"integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>to-do App</title>
+</head>
+<body>
+    <div>
+        <!-- Everything goes in this div -->
+        <div class="container">
+            <div class = "img-title">
+                <ul id ="topul">
+                    <li id="one"> <h1> Your to-do App! </h1> </li>
+                    <li id="two"> <img src="/assets/logo.png" alt="logo"></li>
+                </ul>
+            </div>
+             <!-- Form for posting -->
+            <form>
+                <input type="text" name="item" placeholder="Add item" required>
+                <button type="submit success"> Add item </button>
+            </form>
+    
+        <br>
+        <article>
+            <p>To do things(list): </p>
+            <ul id="items">
+                <%for(var i=0; i < data.length; i++){%>
+                    <li><%= data[i].item %></li>
+            <% } %>
+            </ul>
+        </article>
+       </div>
+    </div>
+    <script type="text/javascript" src="/assets/todo-list.js"></script>
+</body>
+</html>
