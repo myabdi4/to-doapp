@@ -1,6 +1,6 @@
 var express = require('express');
 var todoController = require('./controller/todocontroller');
-var port = process.env.port || 2022
+var port = process.env.port || 8080
 
 const app = express();
 
@@ -20,4 +20,3 @@ todoController(app);
 app.listen(port, () => {
     console.log(`Now listening to port ${port}`)
 });
-
